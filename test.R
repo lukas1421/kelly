@@ -5,7 +5,7 @@ getOptimal <- function() {
   ruinProb = 1 - p
   x <- rbinom(n = 500, size = 1, prob = ruinProb)
   #print(c('mean is', mean(x)))
-  
+  #test
   runningmax = 0
   optimalF = 0
   print(c(
