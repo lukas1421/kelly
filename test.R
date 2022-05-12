@@ -31,6 +31,7 @@ getOptimal <- function() {
   #print(c(optimalF,runningmax))
   return(optimalF)
 }
+#test etst
 
 sum = 0
 trials = 2000
