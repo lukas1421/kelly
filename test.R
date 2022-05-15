@@ -1,9 +1,9 @@
 getOptimal <- function() {
   
-  b = 1
+  b = 2
   p = 0.6
   ruinProb = 1 - p
-  x <- rbinom(n = 200, size = 1, prob = ruinProb)
+  x <- rbinom(n = 500, size = 1, prob = ruinProb)
   #print(c('mean is', mean(x)))
   #test
   runningmax = 0
@@ -34,7 +34,7 @@ getOptimal <- function() {
 #test etst
 
 sum = 0
-trials = 1000
+trials = 10000
 df = data.frame(rep(0,trials))
 colnames(df) <- 'res'
 for (i in seq(1, trials)) {
@@ -46,6 +46,7 @@ for (i in seq(1, trials)) {
 print(c('average', sum / trials))
 print(df)
 print(mean(df$res))
+print(sd(df$res))
 
 p <- ggplot(df, aes(x=res)) + geom_histogram(binwidth=0.01)
 p
